@@ -1,0 +1,19 @@
+# Template WSGI file for Apache / WSGI.
+import site
+import os
+import sys
+
+#include virtualenv libs
+site.addsitedir('/home/dev/Envs/wwathb_com/lib/python2.6/site-packages')
+site.addsitedir('/home/dev/www/chichico/chichicodjango')
+site.addsitedir('/home/dev/www/chichico/chichicodjango/chichico')
+
+sys.stdout = sys.stderr
+
+# Set correct settings variable.
+os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
+
+import django.core.handlers.wsgi
+
+# Lastly, load handler.
+application = django.core.handlers.wsgi.WSGIHandler()

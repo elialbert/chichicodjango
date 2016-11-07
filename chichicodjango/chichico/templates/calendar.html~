@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="calendar-content">
+<h2>Calendar</h2>
+<p>
+</p>
+</div>
+{% endblock %}
